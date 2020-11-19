@@ -1,3 +1,4 @@
+import 'package:brokersapp/Screens/Screen_2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -59,7 +60,7 @@ class _MyState extends State<Screen_1> {
                       shadowColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
                     ),
                     autofocus: true,
-                    onPressed: Dap,
+                    onPressed: () { Navigator.pushNamed(context, Screen_2.id);},
                     child: Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Text(
