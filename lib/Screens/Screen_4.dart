@@ -70,9 +70,12 @@ class _MyState extends State<Screen_4> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    CircleAvatar(
-                      backgroundImage: NetworkImage('https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png'),
-                      radius: 30,
+                    Hero(
+                      tag: 'user',
+                      child: CircleAvatar(
+                        backgroundImage: NetworkImage('https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png'),
+                        radius: 30,
+                      ),
                     ),
                   ],
                 ),

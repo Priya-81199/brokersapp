@@ -1,3 +1,4 @@
+import 'package:brokersapp/Screens/Screen_5.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -31,9 +32,12 @@ class _MyState extends State<Screen_2> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                CircleAvatar(
-                  backgroundImage: NetworkImage('https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png'),
-                  radius: 70,
+                Hero(
+                  tag: 'user',
+                  child: CircleAvatar(
+                    backgroundImage: NetworkImage('https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png'),
+                    radius: 70,
+                  ),
                 ),
                 SizedBox(
                   height: 20,
@@ -59,21 +63,24 @@ class _MyState extends State<Screen_2> {
                 SizedBox(
                   height: 20,
                 ),
-                ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
-                    foregroundColor:MaterialStateProperty.all<Color>(Colors.white),
-                    overlayColor: MaterialStateProperty.all<Color>(Colors.lightGreenAccent),
-                    shadowColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
-                  ),
-                  autofocus: true,
-                  onPressed: Dap,
-                  child: Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Text(
-                      'Get Started',
-                      style: TextStyle(
-                        fontSize: 14,
+                Hero(
+                  tag: 'green_button',
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                      foregroundColor:MaterialStateProperty.all<Color>(Colors.white),
+                      overlayColor: MaterialStateProperty.all<Color>(Colors.lightGreenAccent),
+                      shadowColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
+                    ),
+                    autofocus: true,
+                    onPressed: () { Navigator.pushNamed(context, Screen_5.id);},
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Text(
+                        'Get Started',
+                        style: TextStyle(
+                          fontSize: 14,
+                        ),
                       ),
                     ),
                   ),

@@ -52,21 +52,24 @@ class _MyState extends State<Screen_1> {
                   SizedBox(
                     height: 20,
                   ),
-                  ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
-                      foregroundColor:MaterialStateProperty.all<Color>(Colors.white),
-                      overlayColor: MaterialStateProperty.all<Color>(Colors.lightGreenAccent),
-                      shadowColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
-                    ),
-                    autofocus: true,
-                    onPressed: () { Navigator.pushNamed(context, Screen_2.id);},
-                    child: Padding(
-                      padding: const EdgeInsets.all(15.0),
-                      child: Text(
-                        'Login',
-                        style: TextStyle(
-                          fontSize: 14,
+                  Hero(
+                    tag : 'green_button',
+                    child: ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(Colors.green),
+                        foregroundColor:MaterialStateProperty.all<Color>(Colors.white),
+                        overlayColor: MaterialStateProperty.all<Color>(Colors.lightGreenAccent),
+                        shadowColor: MaterialStateProperty.all<Color>(Colors.lightGreen),
+                      ),
+                      autofocus: true,
+                      onPressed: () { Navigator.pushNamed(context, Screen_2.id);},
+                      child: Padding(
+                        padding: const EdgeInsets.all(15.0),
+                        child: Text(
+                          'Login',
+                          style: TextStyle(
+                            fontSize: 14,
+                          ),
                         ),
                       ),
                     ),
