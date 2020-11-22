@@ -17,6 +17,7 @@ class _MyState extends State<Screen_1> {
     return  Scaffold(
           backgroundColor: Colors.white,
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             backgroundColor: Colors.blueGrey[900],
             title: Center(
               child: Text(

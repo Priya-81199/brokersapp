@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:brokersapp/Screens/Components.dart';
+
 
 class Screen_4 extends StatefulWidget {
   static const String id = "Screen_4";
@@ -37,16 +39,10 @@ class _MyState extends State<Screen_4> {
   }
   @override
   Widget build(BuildContext context) {
+
     return  Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.blueGrey[900],
-        title: Center(
-          child: Text(
-              'Brokers@pp'
-          ),
-        ),
-      ),
+      appBar: buildAppBar(context),
       body: val ?
       Container(
           child: AlertDialog(
@@ -67,18 +63,7 @@ class _MyState extends State<Screen_4> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Hero(
-                      tag: 'user',
-                      child: CircleAvatar(
-                        backgroundImage: NetworkImage('https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png'),
-                        radius: 30,
-                      ),
-                    ),
-                  ],
-                ),
+
                 SizedBox(
                   height: 120,
                 ),

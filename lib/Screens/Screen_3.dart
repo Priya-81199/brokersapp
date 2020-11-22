@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:brokersapp/Screens/Components.dart';
 
 
 class Screen_3 extends StatefulWidget {
@@ -18,14 +19,7 @@ class _MyState extends State<Screen_3> {
 
     return  Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: Colors.blueGrey[900],
-        title: Center(
-          child: Text(
-              'Brokers@pp'
-          ),
-        ),
-      ),
+      appBar: buildAppBar(context),
       body: Center(
         child: Container(
           margin: EdgeInsets.all(20.0),

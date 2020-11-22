@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:brokersapp/Screens/Screen_1.dart';
 import 'package:brokersapp/Screens/Screen_4.dart';
+import 'package:brokersapp/Screens/Screen_6.dart';
+import 'package:brokersapp/Screens/Components.dart';
 
 class Screen_5 extends StatefulWidget {
   static const String id = "Screen_5";
@@ -17,14 +19,7 @@ class _MyState extends State<Screen_5> {
   Widget build(BuildContext context) {
     return  Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor:Colors.blueGrey.shade900,
-        title: Center(
-          child: Text(
-              'Brokers@pp'
-          ),
-        ),
-      ),
+      appBar: buildAppBar(context),
       body: Center(
         child: Container(
           margin: EdgeInsets.all(20.0),
@@ -33,45 +28,15 @@ class _MyState extends State<Screen_5> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    ElevatedButton(
-                      style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
-                      foregroundColor:MaterialStateProperty.all<Color>(Colors.white),
-                      overlayColor: MaterialStateProperty.all<Color>(Colors.redAccent),
-                      shadowColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
-                    ),
-                      autofocus: true,
-                        onPressed: () { Navigator.pushNamed(context, Screen_1.id);},
-                        child: Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Text(
-                            'Logout',
-                            style: TextStyle(
-                              fontSize: 14,
-                            ),
-                          ),
-                        ),
-                    ),
-                    Hero(
-                      tag: 'user',
-                      child: CircleAvatar(
-                        backgroundImage: NetworkImage('https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/avat-01-512.png'),
-                        radius: 30,
-                      ),
-                    ),
-                  ],
-                ),
+
                 SizedBox(
                   height: 60,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children : [
-                    buildIcon(Icons.home_rounded,null),
-                    buildIcon(Icons.add_alert_rounded,null),
+                    buildIcon(Icons.home_rounded,null,context),
+                    buildIcon(Icons.add_alert_rounded,null,context),
                   ]
                 ),
                 SizedBox(
@@ -80,8 +45,8 @@ class _MyState extends State<Screen_5> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    buildIcon(Icons.person_search_rounded,null),
-                    buildIcon(Icons.calculate_rounded,Screen_4.id),
+                    buildIcon(Icons.person_search_rounded,null,context),
+                    buildIcon(Icons.calculate_rounded,Screen_4.id,context),
                   ]
                 ),
                 SizedBox(
@@ -90,8 +55,8 @@ class _MyState extends State<Screen_5> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children : [
-                      buildIcon(Icons.settings_rounded,null),
-                      buildIcon(Icons.person_add_alt_1_rounded,null),
+                      buildIcon(Icons.settings_rounded,null,context),
+                      buildIcon(Icons.person_add_alt_1_rounded,Screen_6.id,context),
                     ]
                 ),
                 SizedBox(
@@ -100,8 +65,8 @@ class _MyState extends State<Screen_5> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    buildIcon(Icons.call_rounded,null),
-                    buildIcon(Icons.menu_book_rounded,null),
+                    buildIcon(Icons.call_rounded,null,context),
+                    buildIcon(Icons.menu_book_rounded,null,context),
                   ]
                 ),
                 SizedBox(
@@ -116,13 +81,5 @@ class _MyState extends State<Screen_5> {
     );
   }
 
-  IconButton buildIcon(IconData icon , var screen) {
-    return IconButton(
-        color: Colors.blueGrey.shade900,
-        iconSize: 60,
-        icon: Icon(icon),
-        onPressed: () { Navigator.pushNamed(context, screen);}
-    );
-  }
 
 }
