@@ -18,7 +18,7 @@ class _MyState extends State<Screen_5> {
     return  Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey[900],
+        backgroundColor:Colors.blueGrey.shade900,
         title: Center(
           child: Text(
               'Brokers@pp'
@@ -38,9 +38,9 @@ class _MyState extends State<Screen_5> {
                   children: [
                     ElevatedButton(
                       style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all<Color>(Colors.redAccent),
+                      backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
                       foregroundColor:MaterialStateProperty.all<Color>(Colors.white),
-                      overlayColor: MaterialStateProperty.all<Color>(Colors.red),
+                      overlayColor: MaterialStateProperty.all<Color>(Colors.redAccent),
                       shadowColor: MaterialStateProperty.all<Color>(Colors.pinkAccent),
                     ),
                       autofocus: true,
@@ -65,7 +65,7 @@ class _MyState extends State<Screen_5> {
                   ],
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 60,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -105,7 +105,7 @@ class _MyState extends State<Screen_5> {
                   ]
                 ),
                 SizedBox(
-                  height: 20,
+                  height: 80,
                 ),
 
               ],
@@ -116,22 +116,13 @@ class _MyState extends State<Screen_5> {
     );
   }
 
-  Container buildIcon(IconData icon , var screen) {
-    return Container(
-                    padding: EdgeInsets.symmetric(horizontal: 24.0,vertical: 8.0),
-                    decoration: BoxDecoration(
-                        color: Colors.blueGrey[900],
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.blueGrey[900])
-                    ),
-                    child: IconButton(
-                        color: Colors.white,
-                        padding: const EdgeInsets.all(14.0),
-                        iconSize: 48,
-                        icon: Icon(icon),
-                        onPressed: () { Navigator.pushNamed(context, screen);}
-                    ),
-                  );
+  IconButton buildIcon(IconData icon , var screen) {
+    return IconButton(
+        color: Colors.blueGrey.shade900,
+        iconSize: 60,
+        icon: Icon(icon),
+        onPressed: () { Navigator.pushNamed(context, screen);}
+    );
   }
 
 }

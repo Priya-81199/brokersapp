@@ -5,6 +5,7 @@ import 'package:brokersapp/Screens/Screen_2.dart';
 import 'package:brokersapp/Screens/Screen_3.dart';
 import 'package:brokersapp/Screens/Screen_4.dart';
 import 'package:brokersapp/Screens/Screen_5.dart';
+import 'package:brokersapp/Screens/Screen_6.dart';
 
 void main() {
   runApp(BrokersApp());
@@ -21,6 +22,7 @@ class BrokersApp extends StatelessWidget {
         Screen_3.id : (context) => Screen_3(),
         Screen_4.id : (context) => Screen_4(),
         Screen_5.id : (context) => Screen_5(),
+        Screen_6.id : (context) => Screen_6(),
       },
     );
   }
