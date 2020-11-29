@@ -3,20 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:brokersapp/Screens/Components.dart';
 
 
-
-class Screen_3 extends StatefulWidget {
-  static const String id = "Screen_3";
+class Screen_7 extends StatefulWidget {
+  static const String id = "Screen_7";
   @override
   _MyState createState() => _MyState();
 }
 
-class _MyState extends State<Screen_3> {
+class _MyState extends State<Screen_7> {
   void Dap(){
     print('Hello');
   }
-  List<String> Properties = ['Property','Property 1','Property 2','Property 3','Property 4','Property 5'];
-  String topValue = 'Property';
-  String dropdownValue = 'One';
+
   @override
   Widget build(BuildContext context) {
 
@@ -31,32 +28,6 @@ class _MyState extends State<Screen_3> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-              DropdownButton<String>(
-                      value: dropdownValue,
-                      icon: Icon(Icons.arrow_downward),
-                      iconSize: 24,
-                      elevation: 16,
-                      style: TextStyle(
-                          color: Colors.deepPurple
-                      ),
-                      underline: Container(
-                        height: 2,
-                        color: Colors.deepPurpleAccent,
-                      ),
-                      onChanged: (String newValue) {
-                        setState(() {
-                          dropdownValue = newValue;
-                        });
-                      },
-                      items: <String>['One', 'Two', 'Three', 'Four']
-                          .map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      })
-                          .toList(),
-            ),
 
                 SizedBox(
                   height: 20,

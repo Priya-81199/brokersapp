@@ -1,0 +1,8 @@
+Screen_1() = 1st login page,
+Screen_2() = 2nd login page,
+Screen_3() = Reminder page,
+Screen_4() = Caculate page,
+Screen_5() = Dashboard,
+Screen_6() = Broadcast groups page,
+Screen_7() = some new page,
+Components() = Components page,

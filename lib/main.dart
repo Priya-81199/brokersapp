@@ -1,3 +1,4 @@
+import 'package:brokersapp/Screens/Screen_7.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:brokersapp/Screens/Screen_1.dart';
@@ -16,7 +17,7 @@ class BrokersApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: Screen_6.id,
+      initialRoute: Screen_3.id,
       routes: {
         Screen_1.id : (context) => Screen_1(),
         Screen_2.id : (context) => Screen_2(),
@@ -24,6 +25,7 @@ class BrokersApp extends StatelessWidget {
         Screen_4.id : (context) => Screen_4(),
         Screen_5.id : (context) => Screen_5(),
         Screen_6.id : (context) => Screen_6(),
+        Screen_7.id : (context) => Screen_7(),
         Components.id : (context) => Components(),
       },
     );
