@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:brokersapp/Screens/Screen_1.dart';
 import 'package:brokersapp/Screens/Screen_4.dart';
 import 'package:brokersapp/Screens/Screen_6.dart';
+import 'package:brokersapp/Screens/Screen_3.dart';
 import 'package:brokersapp/Screens/Components.dart';
 
 class Screen_5 extends StatefulWidget {
@@ -36,7 +37,7 @@ class _MyState extends State<Screen_5> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children : [
                     buildIcon(Icons.home_rounded,null,context),
-                    buildIcon(Icons.add_alert_rounded,null,context),
+                    buildIcon(Icons.add_alert_rounded,Screen_3.id,context),
                   ]
                 ),
                 SizedBox(
