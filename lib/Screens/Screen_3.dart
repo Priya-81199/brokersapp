@@ -20,7 +20,7 @@ class _MyState extends State<Screen_3> {
   }
   void reset(){
     setState(() {
-      
+
     });
     val = false;
   }
